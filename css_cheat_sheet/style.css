@@ -1,0 +1,253 @@
+body {
+  background-color: #f4f4f4;
+  color: #555555;
+
+
+  font-family: Arial, helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+
+  /* shorthand way to fornt weight size and family*/
+
+  font: normal 16px Arial, helvetica, sans-serif;
+
+  line-height:1.6em;
+  margin: 0px;
+}
+
+/* colors in css*/
+ /* body{
+   color: red;
+   background: coral; //html5 color style
+ }
+
+ h1{
+   color: #00ff00;
+ }
+ p{
+   color: rgb(0,0,255);
+ } */
+
+ /*web safe font in css*/
+ /* serif - will have extra edges in the corner
+ sans-serif - no extra edges */
+
+ /* padding- is nothing but the space arround the element with respect to the element border
+ margin- is nothing but the space outside the element from its border.
+
+both padding and margin will apply as top, right,bottom, left in a circle form.
+
+p{
+margin-top: 5px;
+margin-bottom: 5px;
+margin-right: 5px;
+margin-left: 5px;
+}
+
+//short-hand represtation of same
+p{
+margin: 5px 10px; (top, bottom == 5px, left right == 10px)
+}
+ */
+
+/*Global styles for links*/
+
+a{
+  text-decoration: none; /*getrid of underline*/
+  color:#000;
+}
+
+/*different stages of links*/
+
+a:hover {
+  color: red; /* when hovered shows red color*/
+}
+
+/*when clicked on the link then shows green */
+a:active{
+  color: green;
+}
+
+/*when we visited that page using the link*/
+a:visited{
+  color: grey;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+.button{
+  background-color:#333;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+}
+.button:hover{
+  background: red;
+  color:#fff;
+}
+
+/* when we float elements, we have to clear them up, otherwise it create mess for next elements */
+.clr{
+  clear: both;
+}
+
+.box-1 {
+  background-color: #333;
+  color: #fff;
+  border: 3px red solid;
+  border-bottom-style: dotted;
+  /*short hand */
+  padding:20px;
+  margin: 20px 0px;
+}
+
+/* target h1 inside box1 */
+.box-1 h1 {
+  font-family:Tahoma;
+  font-weight:800;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em
+
+}
+
+.box-2{
+  border: 3px blue solid;
+  padding:20px;
+  margin:20px 0px;
+}
+
+.categories{
+  border: 1px #ccc solid;
+  padding 10px;
+  /*for rounded edges*/
+  border-radius: 15px;
+}
+
+.categories h1{
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.categories ul{
+  padding: 0px;
+  padding-left:20px;
+  list-style:none;
+}
+/*list-style-image: url('./images/check.png');*/
+.categories li{
+  padding-bottom: 6px;
+  border-bottom: dotted 3px #333; /*creates a line dotted */
+
+}
+
+/*forms*/
+.my-form{
+  padding:20px;
+  border: 2px solid green;
+  margin-top: 10px;
+}
+.my-form .form-group {
+  padding-bottom: 15px;
+}
+
+.my-form label{
+  display: block;/*p[ush elemnt to next line*/
+}
+
+.my-form input[type="text"], .my-form textarea {
+  padding: 8px;
+  width: 100%;
+}
+
+/* .my-form input[type="submit"]{
+  background-color:#333;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+
+} */
+
+
+.block{
+  float:left;
+  width:33.3%;
+  border:1px solid #ccc;
+  padding:10px;
+  box-sizing: border-box; /* it takes the padding and border and applies both within the width it self*/
+}
+
+#main-block{
+  float:left;
+  width: 70%;
+  padding:15px;
+  box-sizing: border-box;
+}
+#sidebar{
+  float: right;
+  width:30%;
+  background-color: #333;
+  color:#fff;
+  padding:15px;
+  box-sizing: border-box;;
+}
+
+/*position*/
+
+.p-box{
+  position: relative;
+  width: 800px;
+  height:500px;
+  border: 1px solid black;
+  margin-top:30px;
+  background-image: url('./images/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-position: 100px 200px; /*position the images accordingly to left andright */
+  background-position: center center;/*centers the image both horizontally and vertically*/
+}
+.p-box h1{
+  position: absolute;
+  top:100px;
+  left: 200px;
+}
+
+.p-box h2 {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+}
+
+/*position fixed*/
+.fix-me{
+  position: fixed;
+  top:400px;
+}
+
+/*pseudo elements*/
+
+/* target first child of ul */
+
+.my-list li:first-child {
+  background: red;
+}
+
+/*target last element*/
+
+.my-list li:last-child {
+  background: blue;
+}
+
+/*target 5th child element */
+
+.my-list li:nth-child(5){
+  background: green;
+}
+
+/*even odd with nth child*/
+
+.my-list li:nth-child(even){
+  background: grey;
+}
